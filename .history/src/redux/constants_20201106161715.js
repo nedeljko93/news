@@ -1,0 +1,1 @@
+export const COUNTRY_HAS_CHANGED = 'country_has_changed';

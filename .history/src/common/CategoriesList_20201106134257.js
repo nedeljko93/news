@@ -1,0 +1,15 @@
+import React from 'react';
+import { Card } from './Card'
+import { CardSection } from './CardSection'
+import{Text} from "react-native"
+
+const CategoriesList = ({ name, list }) => {
+    return (
+        <Card>
+            <CardSection>
+                <Text>name</Text>
+            </CardSection>
+        </Card>
+    )
+}
+export default CategoriesList;
