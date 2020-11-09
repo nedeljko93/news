@@ -12,10 +12,10 @@ class CountrySelection extends Component {
     onCountryStatChange() {
         if (this.props.isTopNewsScreen) {
             this.props.isUS ?
-                this.props.loadTopNews(US) : this.props.loadTopNews(GB)
+                this.props.loadTopNews(US, false) : this.props.loadTopNews(GB, false)
         } else {
 
-            this.props.isUS ? this.props.loadCategories(US) : this.props.loadCategories(GB)
+            this.props.isUS ? this.props.loadCategories(US, false) : this.props.loadCategories(GB, false)
         }
 
     }
@@ -24,10 +24,10 @@ class CountrySelection extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.onCountryStatChange.bind(this)} disabled={this.props.isUS} >
-                    <Text style={this.props.isUS ? styles.inactive : styles.active}>GB</Text>
+                    <Text style={this.props.isUS ? styles.active : styles.inactive}>GB</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={this.onCountryStatChange.bind(this)} disabled={!this.props.isUS} >
-                    <Text style={this.props.isUS ? styles.active : styles.inactive}>US</Text>
+                    <Text style={this.props.isUS ? styles.inactive : styles.active}>US</Text>
                 </TouchableOpacity>
             </View >
         )
