@@ -2,12 +2,18 @@ import React, { useState, useRef } from 'react';
 import { ColapsingCardSection, ItemHorizontal, ArticlesNavigation, Card } from './';
 import { Text, StyleSheet, TouchableOpacity, Image, Dimensions, ScrollView, View } from "react-native"
 
+
+
+
+
 const CategoriesList = ({ name, list, navigation, category }) => {
     const [isVisible, setVisibilty] = useState(false);
     const [index, setIndex] = useState(1);
     const [dimen, setDimen] = useState(0)
     const scrollViewRef = useRef()
     var dim = Dimensions.get('window').width;
+
+
 
     const nextItem = () => {
         if (index < 5) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FlatList, View } from 'react-native';
-import { CardSection, CustomTextInput, NewsItem, Spinner } from '../common';
+import { FlatList , View} from 'react-native';
+import {  CardSection, CustomTextInput, NewsItem, Spinner } from '../common';
 import { loadData } from '../redux/Actions'
 import { connect } from 'react-redux';
 import { US, GB } from '../redux/constants'
@@ -36,7 +36,7 @@ class TopNewsScreen extends Component {
     }
     render() {
         return (
-            <View >
+            <View style={{backgroundColor='#006bb3'}}>
                 <CardSection>
                     <CountrySelection
                         isOneCategoryScreen={false}
