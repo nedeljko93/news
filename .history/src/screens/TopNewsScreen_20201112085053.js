@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { FlatList , View} from 'react-native';
-import {  CardSection, CustomTextInput, NewsItem, Spinner } from '../common';
-import { loadData } from '../redux/Actions'
+import { FlatList } from 'react-native';
+import { Card, CardSection, CustomTextInput, NewsItem, Spinner } from '../common';
+import { loadData, filterArticles } from '../redux/Actions'
 import { connect } from 'react-redux';
 import { US, GB } from '../redux/constants'
 import CountrySelection from '../classComponents/CountrySelection'

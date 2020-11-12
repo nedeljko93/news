@@ -56,7 +56,7 @@ const CategoriesList = ({ name, list, navigation, category }) => {
                     ref={scrollViewRef} >
                     {list.map((item, index) => (
                         <TouchableOpacity
-                            key={item.title}
+                            keyExtractor={(item, index) => index.toString()}
                             onPress={() => navigation.navigate('NewsDetails', { article: list[index] })}>
                             <ItemHorizontal
 
